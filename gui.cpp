@@ -22,9 +22,6 @@ void Gui::on_actionOpen_triggered()
 
 }
 
-
-
-
 //opens file
 void Gui::openFile()
 {
@@ -83,8 +80,7 @@ void Gui::setCurrentFile(const QString &fileName)
     displayFile( m_FileName, ui->originalFile );
 }
 
-
-
+// Creates the scrambled binary file based on the selected input file
 void Gui::createBinary( string filename, int fileSizeBase )
 {
     string fileStub = filename.substr( 0, filename.find( '.' ) );
@@ -160,7 +156,7 @@ void Gui::on_pushButton_released()
 {
     ui->scrambledFile->clear();
     ui->descrambledFile->clear();
-    createBinary( m_FileName.toStdString() , 50 );  //was 50
+    createBinary( m_FileName.toStdString() , 50 );  // was 50
     ui->pushButton_2->setEnabled( true );
 
 }
@@ -177,6 +173,4 @@ void Gui::on_pushButton_2_released()
     descram.descramble( myFile );
 
     descram.displayFile( ui->descrambledFile, m_FileName );
-
-
 }
