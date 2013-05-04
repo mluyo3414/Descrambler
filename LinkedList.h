@@ -341,6 +341,7 @@ void LinkedList<T>::display( ostream &out )
 	else
 	{
 		Node<T>* curr = head;
+		// Ensure the list is not absolutely empty
 		while( curr -> getNext() != NULL )
 		{
 			out << curr-> getNext() << endl; 
@@ -372,17 +373,5 @@ int LinkedList<T>::count()
 {
 	return cnt;
 }
-
-
-/* Traversal
-
-Node<T>* curr = head;
-while( curr != NULL )
-{
-//do something
-
-curr = curr->getNext();
-}
-*/
 
 #endif
