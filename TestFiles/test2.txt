@@ -1,0 +1,5 @@
+Is this a question? 
+This is a statement. 
+This is silly! 
+If your program can spell check these correctly; 
+you are off to a good start!

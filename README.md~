@@ -1,0 +1,24 @@
+%DESCRIPTION:
+The scrambler converts plain text files to scrambled bin files and the descrambler
+converts bin files to plain text files.
+
+%ADDITIONAL PROGRAMS TO RUN THE PROJECT:
+
+-QT
+
+* The program can be made and executed from the terminal as well as from QT.
+For reference on how to install Qt, please go to:
+http://qt-project.org/doc/qt-4.8/installation.html
+
+%INSTRUCTIONS:
+*From the terminal once in the project directory:
+qmake - project
+qmake
+make
+
+*Run the executable by doing
+./FileScrambler
+
+* There are some test files to try the project in the the TestFiles directory.
+* You can click on any of those files and click Scramble or Descramble in the GUI to see both formats of the file.
+
