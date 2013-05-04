@@ -6,7 +6,6 @@
 
 using namespace std;
 
-//what if size if 0?
 Record::Record( int position, char *record, int size )
 {
     if( size > 0 )
@@ -59,6 +58,7 @@ Record::Record(const Record &rhs)
         }
     }
 }
+
 //assignment operator
 const Record &Record::operator=( const Record &rhs )
 {
@@ -67,11 +67,11 @@ const Record &Record::operator=( const Record &rhs )
         delete[] record;
         this->position = rhs.position;
         this->size = rhs.size;
-        this->record = new char [ size ];	//possible error here
+        this->record = new char [ size ];
 
-        for( int i = 0; i < size; i++ )
+        for( int i = 0; i < size; i++ ) // Overload the operator
         {
-            this->record[i] = rhs.record[i];	//possibly this->record[i] = rhs.record[i]
+            this->record[i] = rhs.record[i];
         }
     }
     return *this;
@@ -79,6 +79,7 @@ const Record &Record::operator=( const Record &rhs )
 
 bool Record::operator == ( const Record &rhs )
 {
+    // Compares the position of the current record and the passed record
     return( this->position == rhs.position );
 }
 
