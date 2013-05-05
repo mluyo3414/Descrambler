@@ -30,3 +30,9 @@ make
 * There are some test files to try the project in the the TestFiles directory.
 * You can click on any of those files and click Scramble or Descramble in the GUI to see both formats of the file.
 
+* Detailed steps on how to use our scrambler/descrambler:
+
+1. First run the executable ./FileScrambler
+2. Press Scramble pick a file and watch it get translated into binary
+3. Press descramble to change it back to the original format
+
