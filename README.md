@@ -14,19 +14,22 @@ ADDITIONAL PROGRAMS TO RUN THE PROJECT:
 - QT
 
 * The program can be made and executed from the terminal as well as from QT.
-For references on how to install Qt on various OS, please go to:
+For references on how to install Qt on various OS, please go to
+
 http://qt-project.org/doc/qt-4.8/installation.html
 
-* To simply install QT on a Linux OS the following instruction will download all the files you need.
+* To install QT on a Linux OS the following terminal instruction will download everything needed.
 Bewarned it is a massive download (174 MB):
-sudo apt-get install qt-sdk
+
+		sudo apt-get install qt-sdk
 
 INSTRUCTIONS:
 =======================================
-*From the terminal once in the project directory run the following commands to make and build the project:
-qmake -project
-qmake
-make
+* From the terminal once in the project directory run the following commands to make and build the project:
+
+		qmake -project
+		qmake
+		make
 
 * There are some test files to try the project in the the TestFiles directory.
 * You can click on any of those files and click Scramble or Descramble in the GUI to see both formats of the file.
