@@ -14,13 +14,17 @@ ADDITIONAL PROGRAMS TO RUN THE PROJECT:
 - QT
 
 * The program can be made and executed from the terminal as well as from QT.
-For reference on how to install Qt, please go to:
+For references on how to install Qt on various OS, please go to:
 http://qt-project.org/doc/qt-4.8/installation.html
+
+* To simply install QT on a Linux OS the following instruction will download all the files you need.
+Bewarned it is a massive download (174 MB):
+sudo apt-get install qt-sdk
 
 INSTRUCTIONS:
 =======================================
-*From the terminal once in the project directory:
-qmake - project
+*From the terminal once in the project directory run the following commands to make and build the project:
+qmake -project
 qmake
 make
 
@@ -30,7 +34,7 @@ make
 * Detailed steps on how to use our scrambler/descrambler:
 
 1. Put The descramble File from the repo in a folder, then run the qmake instructions from inside that folder you just created
-2. Run the executable that was just created 
+2. Run the executable that was just created ("./Descrambler")
 3. Press file, then open pick a file, press scramble and watch it get encrypted into binary
 4. Press descramble to change it back to the original format
 
