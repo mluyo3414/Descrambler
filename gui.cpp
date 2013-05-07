@@ -92,7 +92,6 @@ void Gui::createBinary( string filename, int fileSizeBase )
     int fileSize = in2.tellg();
     in2.close();
     int whatsLeft = fileSize;
-    std::cout << whatsLeft << endl;
     std::vector<Record> ll;
     srand( time( NULL ) );
     int recordSize = rand() % 50 + fileSizeBase;
@@ -101,13 +100,10 @@ void Gui::createBinary( string filename, int fileSizeBase )
     in.read( filePart, recordSize );
     while( !in.eof() && !in.fail() )
     {
-        std::cout << "size: " << recordSize << " pos: " << i << " record: " << filePart << endl;
         filePart[recordSize] = '\0';
         Record r( i, filePart, recordSize );
         ll.push_back(r );
-        r.print(std::cout);
         delete [] filePart;
-        r.print(std::cout);
         whatsLeft -= recordSize;
         recordSize = rand() % 50 + fileSizeBase;
         if ( recordSize > whatsLeft )
@@ -119,8 +115,6 @@ void Gui::createBinary( string filename, int fileSizeBase )
     filePart[recordSize-1] = '\0';
     ll.push_back( Record( i, filePart, recordSize-1 ));
     int totalParts = ll.size();
-    for (int i=0;i<ll.size();i++)
-        ll[i].print(std::cout);
     bool* choosen = new bool[totalParts];
     for ( int j=0; j<totalParts; j++ )
         choosen[j] = false;
